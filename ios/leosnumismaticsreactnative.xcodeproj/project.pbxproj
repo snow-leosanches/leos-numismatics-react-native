@@ -15,6 +15,7 @@
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		80A135CE8D004142BACD9943 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E547AAAC64010B9012B44 /* noop-file.swift */; };
+		ABE3139C6DAD432898654F96 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86AA97EDA24F4E448A14F84D /* SpaceMono-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-leosnumismaticsreactnative/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		BD3E547AAAC64010B9012B44 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "leosnumismaticsreactnative/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
 		7BB01CE855C141C09797F120 /* leosnumismaticsreactnative-Bridging-Header.h */ = {isa = PBXFileReference; name = "leosnumismaticsreactnative-Bridging-Header.h"; path = "leosnumismaticsreactnative/leosnumismaticsreactnative-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		86AA97EDA24F4E448A14F84D /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; name = "SpaceMono-Regular.ttf"; path = "../assets/fonts/SpaceMono-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				8A8F2F40600E4ABF85B5A8C9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +138,15 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
+		};
+		8A8F2F40600E4ABF85B5A8C9 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				86AA97EDA24F4E448A14F84D /* SpaceMono-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -199,6 +211,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 				48760BEB18D44A1C9B16E938 /* leosnumismaticsreactnative-Bridging-Header.h in Resources */,
+				ABE3139C6DAD432898654F96 /* SpaceMono-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
