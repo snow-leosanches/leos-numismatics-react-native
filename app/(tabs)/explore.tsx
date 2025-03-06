@@ -6,8 +6,22 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { useSnowplow } from '@/hooks/useSnowplow';
+import { useEffect } from 'react';
 
 export default function TabTwoScreen() {
+  const tracker = useSnowplow();
+
+  useEffect(() => {
+    if (tracker) {
+      console.log('Tracking explore tab');
+      tracker.trackScreenViewEvent({
+        name: 'explore tab',
+        transitionType: 'basic'
+      });
+    }
+  }, [tracker]);
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}

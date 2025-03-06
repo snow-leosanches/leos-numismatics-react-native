@@ -4,8 +4,22 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useSnowplow } from '@/hooks/useSnowplow';
+import { useEffect } from 'react';
 
 export default function HomeScreen() {
+  const tracker = useSnowplow();
+
+  useEffect(() => {
+    if (tracker) {
+      console.log('Tracking index tab');
+      tracker.trackScreenViewEvent({
+        name: 'index tab',
+        transitionType: 'basic'
+      });
+    }
+  }, [tracker]);
+    
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}

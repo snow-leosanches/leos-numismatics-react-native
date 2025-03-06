@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { useSnowplow } from '@/hooks/useSnowplow';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -16,12 +17,22 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+  const tracker = useSnowplow();
 
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
+      if (tracker) {
+        console.log('Tracking screen view event');
+        tracker.trackScreenViewEvent({
+          name: 'my-screen-name',
+          id: '5d79770b-015b-4af8-8c91-b2ed6faf4b1e',
+          type: 'carousel',
+          transitionType: 'basic'
+        });
+      }
     }
-  }, [loaded]);
+  }, [loaded, tracker]);
 
   if (!loaded) {
     return null;
