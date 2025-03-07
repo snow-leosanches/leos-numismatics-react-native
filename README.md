@@ -1,19 +1,37 @@
-# Welcome to your Expo app 👋
+# Leo's Numismatics App in react Mative
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
+0. Create a `.env` file with the following variables:
+
+    ```ini
+    SNOWPLOW_CONSOLE_API_KEY=get-yours-at-the-console-account-manage-organization-api-keys
+    SNOWPLOW_CONSOLE_API_KEY_ID=get-yours-at-the-console-account-manage-organization-api-keys
+    SNOWPLOW_COLLECTOR_URI=http://localhost:9090 # For tests with Snowplow Micro
+    ```
+
 1. Install dependencies
 
    ```bash
-   npm install
+    npm install
    ```
 
 2. Start the app
 
    ```bash
     npx expo start
+   ```
+
+Optionally, you can start this app building natively to either iOS or Android:
+
+   ```bash
+    npx expo run:android
+   ```
+
+   ```bash
+    npx expo run:ios
    ```
 
 In the output, you'll find options to open the app in a
