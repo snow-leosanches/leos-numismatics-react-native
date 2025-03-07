@@ -8,7 +8,7 @@ export const useSnowplow = () => {
     // Initialize the Snowplow tracker.
     newTracker({
       namespace: 'leos-numismatics-react-native',
-      endpoint: 'https://collector-sales-aws.snowplow.io',
+      endpoint: String(process.env['SNOWPLOW_COLLECTOR_URI']),
       appId: 'leos-numismatics-react-native',
     }).then(_tracker => setTracker(_tracker)).catch((error: any) => console.error('Error initializing Snowplow:', error));
   }, [])
